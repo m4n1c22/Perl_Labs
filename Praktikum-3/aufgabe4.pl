@@ -11,20 +11,20 @@ $limit = <STDIN>;
 
 $val = 1;
 for (;$val <= $limit; $val++) {
-push @test_list, 0;
+  push @test_list, 0;
 }
 #We use the Sieve Eratosthenes method for calculating the prime numbers
 #each round we select one number and find the multiple of that number
 # and mark them until the end of the list.
 # We repeat the process until there are numbers left in the list
 for($i=2;$i<=$#test_list;$i++) {
-if($test_list[$i]==0) {
-push @prime_list, $i;
-for($j=$i ; $j<=$limit ; $j += $i) {
-$test_list[$j] = 1;
-}
-}
+  if($test_list[$i]==0) {
+    push @prime_list, $i;
+    for($j=$i ; $j<=$limit ; $j += $i) {
+      $test_list[$j] = 1;
+    }
+  }
 }
 for($i=0;$i<=$#prime_list;$i++) {
-print "$prime_list[$i]\t";
+  print "$prime_list[$i]\t";
 }
