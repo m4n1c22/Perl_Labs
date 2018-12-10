@@ -15,7 +15,7 @@ $xn = $x0;
 # In the first iteration/round it will compute x0.
 # And in the next round x1 and in 15th round x15
 for($i=0;$i<=$n;$i++) {
-$xn = 1/2*($xn + $a/$xn);
+  $xn = 1/2*($xn + $a/$xn);
 }
 # Finding square root with standard function
 $sqrt_a = sqrt($a);
