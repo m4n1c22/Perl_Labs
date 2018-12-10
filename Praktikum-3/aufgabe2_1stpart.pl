@@ -8,6 +8,6 @@ $fact = 1;
 # fact = fact * n where n is decremented from user defined value to 1.
 
 for(; $n>=1; $n--) {
-$fact = $fact*$n;
+  $fact = $fact*$n;
 }
 print "Factorial of n is $fact";
