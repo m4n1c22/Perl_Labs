@@ -14,13 +14,13 @@ $fact_n_diff_k = 1;
 # we have to find the nCk which is
 # factorial(n)/(factorial(k)*factorial(n-k))
 for(; $n>=1; $n--) {
-$fact_n = $fact_n*$n;
+  $fact_n = $fact_n*$n;
 }
 for(; $k>=1; $k--) {
-$fact_k = $fact_k*$k;
+  $fact_k = $fact_k*$k;
 }
 for(; $diff_n_k>=1; $diff_n_k--) {
-$fact_n_diff_k = $fact_n_diff_k*$diff_n_k;
+  $fact_n_diff_k = $fact_n_diff_k*$diff_n_k;
 }
 $binomial_coeff = $fact_n / ($fact_k*$fact_n_diff_k);
 print "Binomial Coefficient is: $binomial_coeff";
