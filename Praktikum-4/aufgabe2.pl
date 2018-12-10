@@ -36,7 +36,7 @@ sub simulate_throws {
     }
 }
 
-simulate_throws(1);
+simulate_throws(1000);
 
 
 
