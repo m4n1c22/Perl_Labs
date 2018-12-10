@@ -24,14 +24,19 @@ sub simulate_throws {
     }
     $num_throws = @_[0];
     
-    print "Result after $num_throws:\n";
+    if($num_throws>1) {
+        print "Result after $num_throws throws:\n";
+    }
+    else {
+        print "Result after $num_throws throw:\n";
+    }
     for($i=0;$i<$num_throws;$i++) {
         $result = rollD10();
         print "$result\n";
     }
 }
 
-simulate_throws(1000);
+simulate_throws(1);
 
 
 
