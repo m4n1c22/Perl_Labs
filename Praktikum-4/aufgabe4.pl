@@ -95,5 +95,5 @@ for($i=0;$i<39;$i++) {
 print "$sorted_list[$i]\n}\n";
 $median = medianOfList(@sorted_list);
 $mean = meanOfList(@sorted_list);
-print "Median: $median, Mean: $mean \n"
+print "Median: $median, Mean: $mean \n";
 
