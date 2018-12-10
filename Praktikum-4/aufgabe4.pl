@@ -1,4 +1,4 @@
-# Aufgabe 4 simulation of selection sort.
+# Aufgabe 4 simulation of selection sort and finding the mean, median of the list.
 
 #Random number generator code aufgabe 2.1
 sub randomPositiveInteger {
@@ -46,6 +46,34 @@ sub selection_sort {
     return @unsorted_list;
 }
 
+# Subroutine to calculate median of a list
+sub medianOfList {
+    $num_args = scalar(@_);
+    @sorted_list = @_;
+    $median = 0;
+    if($num_args%2==0) {
+        $median = ($sorted_list[int($num_args/2)-1]+$sorted_list[int($num_args/2)])/2;
+    }
+    else {
+        $median = $sorted_list[int($num_args/2)];
+    }
+    return $median
+}
+
+# Subroutine to calculate mean of the list
+sub meanOfList {
+    $num_args = scalar(@_);
+    @sorted_list = @_;
+    $sum = 0;
+    for($i=0;$i<$num_args;$i++) {
+        $sum += $sorted_list[$i];
+    }
+    $mean = $sum/$num_args;
+    return $mean;
+}
+
+
+
 @rand_list = generateFortyNumbersLessThan1000();
 print "\nBefore Sorting\n{";
 for($i=0;$i<39;$i++) {
@@ -64,4 +92,8 @@ for($i=0;$i<39;$i++) {
     }
     print "$sorted_list[$i],";
 }
-print "$sorted_list[$i]\n}";
+print "$sorted_list[$i]\n}\n";
+$median = medianOfList(@sorted_list);
+$mean = meanOfList(@sorted_list);
+print "Median: $median, Mean: $mean \n"
+
