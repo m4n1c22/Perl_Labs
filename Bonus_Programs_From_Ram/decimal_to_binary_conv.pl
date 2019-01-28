@@ -4,12 +4,12 @@
 print "Please enter a decimal number:\n";
 $dec = <STDIN>;
 
-$reverse_remainder_str = "";
+$binary_value = "";
 #loop to find the remainder of each round division.
 for($q = $dec; $q >= 1; $q = $q/2) {
     
     $r = $q%2;
-    $remainder = "$r".$remainder;
+    $binary_value = "$r".$binary_value;
 }
 
-print "Binary value of the decimal is $remainder";
+print "Binary value of the decimal is $binary_value";
