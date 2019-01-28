@@ -12,4 +12,4 @@ for($q = $dec; $q >= 1; $q = $q/8) {
     $remainder = "$r".$remainder;
 }
 
-print "Octal value of the decimal is $remainder"
+print "Octal value of the decimal is $remainder";
