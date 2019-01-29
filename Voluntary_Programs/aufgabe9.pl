@@ -1,3 +1,7 @@
+#
+#
+# Aufgabe 9
+#
 # Pascal's triangel
 #         1 
 #        1 1
@@ -7,6 +11,8 @@
 #    1 5 10 10 5 1
 # Print such a pattern of stars based on the number n. 
 # The above depiction is for n = 6.
+
+
 
 # Reading value of n
 $n = <STDIN>;
