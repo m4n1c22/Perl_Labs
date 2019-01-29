@@ -18,7 +18,7 @@ for($a=1;$a<=($n/3);$a++) {
             $sq_sum_a__b = $sq_a + $sq_b;
             $sum_a_b_c = $a + $b + $c;
             if(($sum_a_b_c==$n)&&($sq_sum_a__b == $sq_c)) {
-                print "($a / $b / $c) "
+                print "($a / $b / $c) ";
             }
         }
     }
