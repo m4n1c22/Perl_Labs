@@ -7,10 +7,10 @@
 sub find_perfect_sq_within_range {
     my $range = @_[0];
     my $i;
-    for( $i = 1; ($i*$i) < $range; $i++) {
+    for( $i = 1; ($i*$i) <= $range; $i++) {
        $sq_i = $i * $i;
     }
-    return $i;
+    return $i+1;
 }
 
 
@@ -55,7 +55,7 @@ while($k <= $len) {
     if($change_dir==0) {
     
         $mat_A[$j][$i] = substr($str, $k, 1);
-        print " $i,$j ";
+        print " $j,$i ";
         $k++;
         $i = $i + 1;
         $init_size++;
@@ -66,7 +66,7 @@ while($k <= $len) {
         }
     }
     elsif($change_dir==1) {
-        print " $i,$j ";
+        print " $j,$i  ";
         $mat_A[$j][$i] = substr($str, $k, 1);
         $k++;
         $j = $j - 1;
@@ -81,7 +81,7 @@ while($k <= $len) {
     elsif($change_dir==2) {    
         
         $mat_A[$j][$i] = substr($str, $k, 1);
-        print " $i,$j ";
+        print " $j,$i  ";
         $k++;
         $i = $i - 1;
         $init_size++;
@@ -92,7 +92,7 @@ while($k <= $len) {
         }
     }
     else {
-        print " $i,$j ";
+        print " $j,$i  ";
         $mat_A[$j][$i] = substr($str, $k, 1);
         $k++;
         $j = $j + 1;
