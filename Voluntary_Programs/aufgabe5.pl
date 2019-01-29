@@ -20,13 +20,10 @@ chomp $str;
 
 $len = length $str;
 
-print "\nString length = $len";
-
-print "\n$str";
 
 $perfect_sq = find_perfect_sq_within_range($len);
 
-print "\nPerfect matrix size = $perfect_sq X $perfect_sq";
+
 
 my @mat_A;
 
@@ -50,23 +47,21 @@ $change_axis = 0;
 $sq_size = 1;
 $init_size=0;
 print "\n";
-while($k <= $len) {
+while($k < $len) {
     
     if($change_dir==0) {
     
         $mat_A[$j][$i] = substr($str, $k, 1);
-        print " $j,$i ";
         $k++;
         $i = $i + 1;
         $init_size++;
         if($init_size==$sq_size) {
             $init_size=0;
             $change_axis = 1;
-            #$sq_size++;
+
         }
     }
     elsif($change_dir==1) {
-        print " $j,$i  ";
         $mat_A[$j][$i] = substr($str, $k, 1);
         $k++;
         $j = $j - 1;
@@ -81,18 +76,17 @@ while($k <= $len) {
     elsif($change_dir==2) {    
         
         $mat_A[$j][$i] = substr($str, $k, 1);
-        print " $j,$i  ";
         $k++;
         $i = $i - 1;
         $init_size++;
         if($init_size==$sq_size) {
             $init_size=0;
             $change_axis = 1;
-            #$sq_size++;
+
         }
     }
     else {
-        print " $j,$i  ";
+
         $mat_A[$j][$i] = substr($str, $k, 1);
         $k++;
         $j = $j + 1;
