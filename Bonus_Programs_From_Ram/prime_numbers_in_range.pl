@@ -8,7 +8,7 @@
 # Reading value of n
 $n = int(<STDIN>);
 
-# finding the prime numbers in the range and multiplying
+# finding the prime numbers in the range
 for( $i = 1; $i <= $n; $i++) {
     $flag = 0;
     for( $j = 2; $j <= $i/2; $j++) {
