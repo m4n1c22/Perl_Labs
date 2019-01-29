@@ -1,8 +1,11 @@
 #
-#
 # Aufgabe 17
 #
-
+# Program to compute the triplet a,b,c with the transfer parameter as the input.
+# The following conditions should hold:
+# a <b <c
+# a² + b² = c²
+# a + b + c = n (where n is the transfer parameter)
 
 
 # Reading value of n
