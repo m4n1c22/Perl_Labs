@@ -31,4 +31,4 @@ for( $i = 1; $i <= $n; $i++) {
     }
 }
 
-print "$all_div"
+print "$all_div";
